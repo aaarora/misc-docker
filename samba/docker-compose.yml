@@ -1,0 +1,11 @@
+version: "3"
+services:
+  samba:
+    image: dperson/samba
+    ports:
+     - "445:445"
+     - "139:139"
+    volumes:
+     - ./samba-mnt:/mnt:Z
+    command: '-u "aashay;sambashare" -s "public;/mnt;yes;no;no;aashay" -p'
+
