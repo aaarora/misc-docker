@@ -8,4 +8,3 @@ services:
     volumes:
      - ./samba-mnt:/mnt:Z
     command: '-u "aashay;sambashare" -s "public;/mnt;yes;no;no;aashay" -p'
-
