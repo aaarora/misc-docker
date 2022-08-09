@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  certbot:
+    image: certbot/certbot:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./certs:/etc/letsencrypt:rw
+    command: certonly --standalone -m admin@aashayarora.com --no-eff-email --agree-tos -d test.aashayarora.com
